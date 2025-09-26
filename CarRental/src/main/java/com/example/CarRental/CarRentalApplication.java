@@ -18,14 +18,15 @@ public class CarRentalApplication {
     @Bean
     CommandLineRunner initDefaultUser(UserRepository userRepository) {
         return args -> {
-            String defaultUsername = "demo@wheelio.com";
+            String defaultUsername = "venkateshmannam2005@gmail.com";
             User existing = userRepository.findByUsername(defaultUsername);
             if (existing == null) {
                 User user = new User();
                 user.setUsername(defaultUsername);
-                user.setPassword("demo123");
+                user.setPassword("test123");
                 user.setRole("USER");
                 userRepository.save(user);
+                System.out.println("Created default user: " + defaultUsername);
             }
         };
     }
