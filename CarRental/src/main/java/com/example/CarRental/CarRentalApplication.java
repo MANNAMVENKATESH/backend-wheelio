@@ -2,8 +2,6 @@ package com.example.CarRental;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.boot.CommandLineRunner;
 
@@ -11,12 +9,7 @@ import com.example.CarRental.entity.User;
 import com.example.CarRental.repository.UserRepository;
 
 @SpringBootApplication
-public class CarRentalApplication extends SpringBootServletInitializer {
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(CarRentalApplication.class);
-    }
+public class CarRentalApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CarRentalApplication.class, args);
