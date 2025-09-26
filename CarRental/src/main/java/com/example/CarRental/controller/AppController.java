@@ -19,6 +19,11 @@ public class AppController {
     @Autowired
     private ServiceLayer service;
 
+    @GetMapping("/")
+    public String home() {
+        return "Car Rental API is running! Available endpoints: /api/login, /api/register, /api/payments";
+    }
+
     @PostMapping("/register")
     public User register(@RequestBody User user) {
         return service.saveUser(user);
